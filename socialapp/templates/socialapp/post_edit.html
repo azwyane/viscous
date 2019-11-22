@@ -1,0 +1,23 @@
+{% extends 'socialapp/hbase.html' %}
+
+{% block hom %}
+   
+    <div class="w3-row-padding">
+        <div class="w3-col m12">
+           <div class="w3-card w3-round w3-white" style="margin-top:100px">
+                <div class="w3-container w3-padding">
+                    <h3 class="w3-opacity" style="font-family:Comic Sans MS, cursive, sans-serif;">what's on your mind?</h3>
+                        <form method="POST"  enctype="multipart/form-data">{% csrf_token %}
+                               {{ form.as_p }}
+                        
+                            <button type="submit" class="save w3-button w3-theme" ><i class="fa fa-pencil"></i>&nbsp;post</a></button> 
+                         
+                        </form>
+                </div>
+            
+                
+   
+           
+{% endblock %}
+
+

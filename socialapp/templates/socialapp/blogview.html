@@ -1,0 +1,53 @@
+{% extends 'socialapp/hbase.html' %}
+{% block hom %}
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+    
+      
+    <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+      <a href="{% url 'profileclick' post.author.username %}"><img src="{{post.author.profile.image.url}}" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:50px; height: 50px;"></a>
+        {% if post.author == cu %}
+        <span class="w3-centre w3-opacity"><a href="{% url 'editpost' pk=post.pk %} "><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i></a>
+        <span class="w3-centre w3-opacity"><a href="{% url 'deletepost' pk=post.pk %} ">Delete</a> 
+        {% endif %}  
+        <span class="w3-right w3-opacity">published at {{post.published_date}}</span>
+        <span class="w3-left w3-opacity">{{post.title}}</span>
+        <br>
+        <hr class="w3-clear">
+        <p>{{post.text|safe}}</p>
+          <div class="w3-row-padding" style="margin:0 -16px">
+            {% if post.images %}
+            <div class="w3-half">
+              <img src="{{post.images.url}}" style="width:60%" alt="Northern Lights" class="w3-margin-bottom w3-image object-fit:cover;">
+            </div>
+            {% endif %}
+            <div class="w3-half">
+              <!--img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom"-->
+          </div>
+        </div>
+      
+    </div>
+
+</div>
+<hr>
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+    <a class="btn btn-default" href="{% url 'add_comment' pk=post.pk %}">Add comment</a>
+      {% for comment in post.comments.all %}
+          <div class="w3-row-padding">
+          
+          </div>
+          <hr class="w3-clear">
+          <p>{{ comment.text|linebreaks }}</p>
+          <p>By:<strong>{{ comment.author }}</strong><span class="w3-right w3-opacity">commented at:{{ comment.created_date }}</span></p>
+  
+      {% empty %}
+    <p>No comments till now :(</p>
+{% endfor %}
+{% endblock %}
+
+
+
+
+

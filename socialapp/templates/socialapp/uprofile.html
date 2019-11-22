@@ -1,0 +1,17 @@
+{% extends 'socialapp/lsbase.html' %}
+{% block habibi %}
+{% include 'socialapp/message.html' %}
+ <form method="POST" style="border:1px solid #ccc" enctype="multipart/form-data">
+  <div class="container">
+    <h1>Update user profile</h1>
+    <p>let's make some changes</p>
+    <hr>
+    {% csrf_token %}
+    {{u_form.as_p}}
+    {{p_form.as_p}}
+    <button style="background-color: #4086e0; color: #ffffff" class="btn btn-outline-info" type="submit">Confirm</button>
+    </div>
+  </div>
+</form> 
+
+{% endblock %}
