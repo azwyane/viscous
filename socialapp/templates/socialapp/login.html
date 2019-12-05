@@ -9,12 +9,15 @@
         {% csrf_token %}
         {{form.as_p}}
       <button class="btn btn-outline-info" type="submit">Login</button>
-      <h6><a href="#">Forgot password?</a></h6>
+      <h6><a href="{% url 'password_reset' %}">Forgot password?</a></h6>
     </div>
   </form>
-
-  <footer class="w3-container w3-theme-d5" style="position: fixed; left: 25; bottom: 25; width:100% ; height: -25% ;">
+  {% load socialaccount %}
+ 
+ 
+  <div class="w3-container w3-theme-d5" style="position: fixed; left: 25; width:100% ; height: -25% ;">
       <a href="{% url 'signup'  %}" class="btn">Sign Up</a>  
-  </footer>
+      <a href="{% provider_login_url 'google' %}" class="btn">Login with Gmail</a> 
+  </div>
   
 {% endblock %}

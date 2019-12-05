@@ -30,7 +30,7 @@ SECRET_KEY = get_secret("s_key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.3','127.0.0.1']
+ALLOWED_HOSTS = ['192.168.1.7','127.0.0.1','localhost']
 
 
 # Application definition
@@ -43,9 +43,26 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+    'django.contrib.sites', # new
+    'allauth', # new
+    'allauth.account', # new
+    'allauth.socialaccount', # new
+    'allauth.socialaccount.providers.google', # new
     
 ]
+
+# demo_project/settings.py
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+SITE_ID = 1
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+
+#till here
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,6 +72,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'viscous.urls'
@@ -70,6 +88,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
+                 # `allauth` needs this from django
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -108,6 +129,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -138,3 +161,7 @@ EMAIL_USE_TLS=True
 EMAIL_TIMEOUT=21600
 EMAIL_HOST_USER=get_secret("a_key")
 EMAIL_HOST_PASSWORD = get_secret("EMAIL_PASS")
+
+
+LOGIN_REDIRECT_URL = 'home'
+#USE_X_FORWARDED_HOST = True

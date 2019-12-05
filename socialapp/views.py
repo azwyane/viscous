@@ -19,7 +19,7 @@ def home(request):
     paginator = Paginator(context,3)
     page = request.GET.get('page')
     context = paginator.get_page(page)
-    return render(request,'socialapp/home.html',{'context':context})
+    return render(request,'socialapp/home.html',{'context':context,'user':request.user})
 
 
 

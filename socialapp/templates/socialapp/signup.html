@@ -1,9 +1,10 @@
 {% extends 'socialapp/lsbase.html' %}
 {% block habibi %}
-
+{% load socialaccount %}
  <form method="POST" style="border:1px solid #ccc">
   <div class="container">
-    <h1>Sign Up</h1>
+      <a href="{% provider_login_url 'google' %}"  style="background-color: #4086e0; color: #ffffff" class="btn btn-outline-info">Signup with Gmail</a>
+    <p><h3>OR </h3><h1>Sign Up manually</h1></p>
     <p>Please fill in this form to create an account.</p>
     <hr>
     {% csrf_token %}
@@ -11,6 +12,7 @@
     <button style="background-color: #4086e0; color: #ffffff" class="btn btn-outline-info" type="submit">Confirm</button>
     </div>
   </div>
+  
 </form> 
-
+ 
 {% endblock %}

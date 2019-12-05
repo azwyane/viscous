@@ -74,16 +74,15 @@
   
 <body style="background-image: url({% static 'socialapp/img/entry.jpg' %});">
   {% include 'socialapp/message.html' %}
-  <div class="w3-col m7">
-    <div class="w3-row-padding">
-      <div class="w3-col m12">
+       <div class="w3-display-middle w3-center">
+         <div class="w3-row">
         <button class="button"><a href="{% url 'loginu' %}"><span>login </span> </a></button>
+        </div>
         <button class="button" style="background-color: #66ff66"><a href="{% url 'signup' %}"><span>Sign up </span></a></button>
       </div>
       
-    </div>
-  </div>
-  <div class="w3-row-padding">
+  
+ <!--- <div class="w3-row-padding">
   <div id="typedtext"></div>
   </div>
 	<script>
@@ -125,7 +124,7 @@ function typewriter()
 
 
 typewriter();
-   </script>
+   </script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
