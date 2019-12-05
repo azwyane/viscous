@@ -1,0 +1,21 @@
+{% extends 'socialapp/pcbase.html' %}
+{% block ops %}
+
+<div class="w3-container" style="margin-top:80px;">
+
+<div class="w3-row-padding">
+{% for people in peoples%}
+<div class="w3-third w3-section">
+<div class="w3-card-4">
+<a href="#"><img src="{{people.image.url}}" style="width:100%; height:300px;"></a>
+<div class="w3-container w3-white">
+<h4>{{people}}</h4>
+<p>The Cinque Terre (five lands) is a portion of the Italian Riviera. The coastline with five villages: Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore
+is a UNESCO World Heritage Site.</p>
+</div>
+</div>
+</div>
+{% endfor %}
+
+{% endblock %}
+

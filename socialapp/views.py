@@ -1,7 +1,7 @@
 from django.shortcuts import render,get_object_or_404
 #from django.views.generic import UpdateView
 #from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
-from .models import post
+from .models import post,profile
 from django.utils import timezone
 from .forms import PostForm
 from django.shortcuts import redirect
@@ -79,7 +79,7 @@ def signup(request):
             user = form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f"New account created: {username}")
-            login(request, user)
+            login(request, user,backend='django.contrib.auth.backends.ModelBackend')
             return redirect('home')
 
         else:
@@ -170,5 +170,13 @@ def profileclick(request,**kwargs):
     context = paginator.get_page(page)
     return render(request,'socialapp/profileclick.html',{'context':context,'user':user})
 
+
+@login_required(login_url='/login/')
+def all_people(request):
+    peoples=profile.objects.all
+    #paginator = Paginator(context,6)
+    #page = request.GET.get('page')
+    #context = paginator.get_page(page)
+    return render(request,'socialapp/all_people.html',{'peoples':peoples })
 
 

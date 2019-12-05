@@ -19,5 +19,5 @@ urlpatterns=[
     path('change-password/done/',auth_views.PasswordResetDoneView.as_view(template_name='socialapp/resetpswd_done.html'), name='password_reset_done'),
     path('change-password-confirm/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(template_name='socialapp/resetpswd_confirm.html'), name='password_reset_confirm'),
     path('change-password-complete/',auth_views.PasswordResetCompleteView.as_view(template_name='socialapp/resetpswd_complete.html'), name='password_reset_complete'),
-   
+    path('all-people/', views.all_people, name='all_people'),
 ]
