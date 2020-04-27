@@ -4,7 +4,7 @@
 
 [![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://www.azwane.pythonanywhere.com) 
 
-## Table of Contents (Optional)
+## Table of Contents 
 
 - [Introduction](#introduction)                                                                                                
    1. General structure of web app                                                                                  
@@ -12,7 +12,7 @@
    1. Overview of requirements                                                                                     
 - [Problem statement](#problem)                                                                                     
 - [Objectives](#objectives)                                       
-- [Theoretical Background](#theoretical)                                                                             
+- [Theoretical Background](#theory)                                                                             
    1. Structure of web app                                                                                               
    1. Working theory                                                                                                       
    1. Testing and maintenance                 
@@ -32,7 +32,7 @@ Viscous social web app is a browser based software application system, it will p
 - Have contact information of each other
 - Announcing events
 
-# PROBLEM STATEMENT 
+# PROBLEM 
 The project idea took the real form when there arrived a problem for sharing information of classroom and college events with fellow students among each other. There is no proper platform provided by college where student-student and teacher-student could share information with each other. There is no direct communication between teacher and student when needed. Most of the information is shared through messaging apps which aren't commonly used by everybody and not everyone does have an account. Therefore, circulation of information to everyone is difficult and in such a chat all information gets lost among other communication messages. Neither one can share their knowledge and views and social messages reaching everyone.
 
 # OBJECTIVES
@@ -40,7 +40,7 @@ The project idea took the real form when there arrived a problem for sharing inf
 - Get notified about recent activities
 - Reduce communication distance and delay
 
-# THEORETICAL BACKGROUND
+# THEORY
 
 ## Structure of web app
 The processing and structure of the viscous app could be shown mainly in two ways, they are:
