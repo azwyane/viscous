@@ -17,7 +17,6 @@
    1. Working theory                                                                                                       
    1. Testing and maintenance                 
 - [Installation](#installation)
-- [Features](#features)
 - [Contributing](#contributing)
 
 # INTRODUCTION
@@ -95,11 +94,6 @@ python3 -m venv venv
 ```
 (venv)$python manage.py run
 ```
-
-## Features
-❤️&nbsp; 
-> 
-
 ---
 
 ##  Contributing
