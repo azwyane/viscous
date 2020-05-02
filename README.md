@@ -6,16 +6,10 @@
 
 ## Table of Contents 
 
-- [Introduction](#introduction)                                                                                                
-   1. General structure of web app                                                                                  
-   1. How to use this report                                                                                             
-   1. Overview of requirements                                                                                     
+- [Introduction](#introduction)                                                                                 
 - [Problem statement](#problem)                                                                                     
 - [Objectives](#objectives)                                       
-- [Theoretical Background](#theory)                                                                             
-   1. Structure of web app                                                                                               
-   1. Working theory                                                                                                       
-   1. Testing and maintenance                 
+- [Backend](#backend)                                                                                            
 - [Installation](#installation)
 - [Contributing](#contributing)
 
@@ -39,23 +33,13 @@ The project idea took the real form when there arrived a problem for sharing inf
 - Get notified about recent activities
 - Reduce communication distance and delay
 
-# THEORY
 
-## Structure of web app
-The processing and structure of the viscous app could be shown mainly in two ways, they are:
-Front-end structure: It is the user view-point structure which is the main way of interacting with the system directly. The system is run on a browser so would be using HTML5, for content designing purpose it would be using CSS and JavaScript. At first the layout of the app is designed using software like Gravit Designer and Figma on the basis of the possible user interactions. Only the structure is programmed as required by design which outputs all templates possible in the web app. This is very useful to start from layout design before functional development because it gives the idea what needs to be developed and preserves the initial design idea for the future.
-
-### Backend structure 
+# BACKEND 
 This is the structure which defines the functionality to the templates designed. The viscous web app would be using:
 - **Python** as the main programming language. Python programming language is very scalable,easy to understand, implement and maintain codes.
 - **Django Framework** as a backbone for data managing and view  controls development. Django is a large framework that helps to create error-free, packageable, maintainable apps within the same project. It has well maintained documentation in each and every thing used in the framework.
 - **SQlite** as a main database for the web app. SQLite is a relational database management system contained in a C library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program. SQLite is ACID-compliant and implements most of the SQL standard, generally following PostgreSQL syntax.
 - **MVC** which is an architectural pattern that separates the application into three logical components: model, view and controller. Each of these components is built to handle specific development aspects of an application. It is one of the most frequently used industry standard web development frameworks to create scalable and extensible projects.
-
-# Testing and maintenance
-The testing is also done. The first unit test for models is done in the python console provided under Django framework. Then the views are tested on every browser specifically Google chrome and Mozilla Firefox of different screen resolution. Then the control testing is done with the concept of white box and black box. Furthermore, SEO test, latency and overall test is done with the Google Lighthouse present on the browser. First release is also tested within other people for review and enhancement.
-The app is maintained and each new feature to add is tested locally and then only gets finally pushed to the main server. The web app is hosted on [here](https://azwane.pythonanywhere.com/) . On further extension new hosting service is chosen for great speed delivery of the site.
-
 
 
 ## Installation
@@ -92,25 +76,23 @@ python3 -m venv venv
 
 > Now to run the project type in your terminal:
 ```
-(venv)$python manage.py run
+(venv)$python manage.py runserver
 ```
 ---
 
 ##  Contributing
-🤝&nbsp;
-> To get started...
 
 ### Step 1
 
-- **Option 1**
+- Option 1
     - 🍴 Fork this repo!
 
-- **Option 2**
+- Option 2
     - 👯 Clone this repo to your local machine using `https://github.com/azwyane/viscous.git`
 
 ### Step 2
 
-- **HACK AWAY!** 🔨🔨🔨
+- HACK AWAY!
 
 ### Step 3
 
@@ -119,7 +101,7 @@ python3 -m venv venv
 
 ---
 
-###  📫&nbsp; Found a bug? Missing a specific feature?
+###  Found a bug? Missing a specific feature?
 
 Feel free to **file a new issue** with a respective title and description on the the [azwyane/visvous](https://github.com/azwyane/viscous/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**! 
 
